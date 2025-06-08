@@ -1,2 +1,4 @@
-# Spatio-Temporal-Pressure-Field-Prediction-Data
-Dataset belong to the paper Spatio-Temporal Pressure Field Prediction in CFD Using a U-Net with Temporal Attention and Optical Flow Integration
+# Spatio-Temporal-Pressure-Field-Prediction-Data-Set
+The dataset used in this study is derived from a two-dimensional incompressible Navier-Stokes solver simulating a lid-driven cavity flow. The spatial domain is discretized into a grid of 81x161 points. At each time step, the dataset contains the horizontal and vertical velocity components (u, w) and the pressure field (p). To capture temporal changes in the velocity field, optical flow between consecutive frames is computed using the Farneback method. These optical flow features are concatenated with the velocity components, resulting in a 4-channel input per time step.
+
+The dataset is divided into sequences of 10 frames, where each sequence is used to predict the subsequent pressure field. An 80%/20% split is applied for training and validation, respectively.
